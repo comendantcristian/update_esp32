@@ -9,7 +9,7 @@ const char * password = "";
 
 
 String FirmwareVer = {
-  "1.2"
+  "1.3"
 };
 #define URL_fw_Version "https://raw.githubusercontent.com/comendantcristian/update_esp32/main/bin_version.txt"
 #define URL_fw_Bin "https://raw.githubusercontent.com/comendantcristian/update_esp32/main/fw.bin"
@@ -25,6 +25,7 @@ unsigned long previousMillis = 0; // will store last time LED was updated
 unsigned long previousMillis_2 = 0;
 const long interval = 60000;
 const long mini_interval = 1000;
+
 void repeatedCall() {
   static int num=0;
   unsigned long currentMillis = millis();
@@ -63,11 +64,7 @@ Button button_boot = {
   0,
   false
 };
-/*void IRAM_ATTR isr(void* arg) {
-    Button* s = static_cast<Button*>(arg);
-    s->numberKeyPresses += 1;
-    s->pressed = true;
-}*/
+
 
 void IRAM_ATTR isr() {
   button_boot.numberKeyPresses += 1;
@@ -85,11 +82,12 @@ void setup() {
   connect_wifi();
 }
 void loop() {
-  if (button_boot.pressed) { //to connect wifi via Android esp touch app 
-    Serial.println("Firmware update Starting..");
-    firmwareUpdate();
-    button_boot.pressed = false;
-  }
+//  if (button_boot.pressed) { //to connect wifi via Android esp touch app 
+//    Serial.println("Firmware update Starting..");
+//    firmwareUpdate();
+//    button_boot.pressed = false;
+//  }
+  Serial.println("rglrjg");
   repeatedCall();
 }
 
