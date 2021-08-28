@@ -11,12 +11,12 @@
 #include <ArduinoOTA.h>
 #include "time.h"
 
-const char * ssid = "Tekwill";
-const char * password = "";
+const char * ssid = "RP - 1";
+const char * password = "royalpublic";
 
 
 String FirmwareVer = {
-  "1.4"
+  "1.5"
 };
 
 #define SS_PIN 21
