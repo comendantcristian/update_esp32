@@ -4,12 +4,12 @@
 #include <WiFiClientSecure.h>
 #include "cert.h"
 
-const char * ssid = "Orange-Tekwill";
+const char * ssid = "Tekwill";
 const char * password = "";
 
 
 String FirmwareVer = {
-  "1.0"
+  "1.2"
 };
 #define URL_fw_Version "https://raw.githubusercontent.com/comendantcristian/update_esp32/main/bin_version.txt"
 #define URL_fw_Bin "https://raw.githubusercontent.com/comendantcristian/update_esp32/main/fw.bin"
